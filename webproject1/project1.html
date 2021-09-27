@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My designs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="project1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="project1">
+        <h1>Zomato</h1>
+        <p class="project-content">Zomato is an <span>Multi national </span>Resturants aggregator and food delivery company founded by Deepinder Goyal and Pankaj Chaddha in 2008 <br> etc..</p>
+        <div class="project1container" id="project1container">
+            <div class="project1content">
+                <div class="project1slide active">
+                <p>Home Page</p>
+                <img src="homeport.png" alt=" ">
+            </div>
+            <div class="project1slide">
+                <p>FIrst Order</p>
+                <img src="first order.png" alt="">
+            </div>
+            <div class="project1slide">
+                <p>TOP Brands</p>
+                <img src="Top brands.png" alt="">
+            </div>
+            <div class="project1slide">
+                <p>Popular Foods</p>
+                <img src="Popular.png" alt="">
+            </div>
+            <div class="project1slide">
+                <p>Sign-up Page</p>
+                <img src="sign up.png" alt="">
+            </div>
+            <div class="project1slide">
+                <p>Footer</p>
+                <img src="footer.png" alt="">
+            </div>
+        </div>
+            <i class="fas fa-caret-left prev"></i>
+            <i class="fas fa-caret-right next"></i>
+        </div>
+        <p class="backtodesign">back to <a id="viewlogo" href="/index.html#mydesigns">my designs</a></p>
+    </div>
+    
+<script>
+    $('.next').on('click', function(){
+    let currentImg = $('.active');
+    let nextImg = currentImg.next();
+    
+    if(nextImg.length === 0) {
+      currentImg.removeClass('active');
+      $('.project1slide').first().addClass('active');
+       } else {
+         currentImg.removeClass('active');
+         nextImg.addClass('active');
+       }
+  });
+
+    $(".prev").on("click", function (){
+        var currentImg = $(".active");
+        var prevImg = currentImg.prev();
+
+        if(prevImg.length === 0) {
+            currentImg.removeClass("active");
+            $(".project1slide").last().addClass("active");
+        } else {
+            currentImg.removeClass("active");
+            prevImg.addClass("active");
+        }
+    });
+</script>
+</body>
+</html>
+
